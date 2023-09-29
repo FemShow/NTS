@@ -1,0 +1,85 @@
+{
+  "$schema": "https://purl.org/csv-cubed/qube-config/v1",
+  "title": "Driver and rider fatalities in reported collisions: percentage over the legal blood alcohol limit by vehicle type and driver age",
+  "description": "Driver and rider fatalities in reported collisions: percentage over the legal blood alcohol limit by vehicle type and driver age",
+  "creator": "https://www.gov.uk/government/organisations/department-for-transport",
+  "publisher": "https://www.gov.uk/government/organisations/department-for-transport",
+  "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+  "keywords": [
+    "fatalaties",
+    "collisions",
+    "alcohol",
+    "DUI"
+  ],
+  "columns": {
+    "Collision year": {
+      "from_template": "government-year"
+    },
+    "Vehicle type": false,
+    "Age 16 to 19": {
+      "type": "observations",
+      "measure": {
+        "label": "16-19",
+        "description": "Percentage of 16 to 19 year olds over the legal blood alcohol limit by vehicle type.",
+        "from_existing": "https://purl.org/csv-cubed/resources/measures#scale"
+      },
+      "data_type": "integer",
+      "unit": {
+        "label": "Number",
+        "from_existing": "http://qudt.org/vocab/unit/NUM"
+      }
+    },
+    "Age 20 to 29": {
+      "type": "observations",
+      "measure": {
+        "label": "20-29",
+        "description": "Percentage of 20 to 29 year olds over the legal blood alcohol limit by vehicle type.",
+        "from_existing": "https://purl.org/csv-cubed/resources/measures#scale"
+      },
+      "data_type": "integer",
+      "unit": {
+        "label": "Number",
+        "from_existing": "http://qudt.org/vocab/unit/NUM"
+      }
+    },
+    "Age 30 to 39": {
+      "type": "observations",
+      "measure": {
+        "label": "30-39",
+        "description": "Percentage of 30 to 39 year olds over the legal blood alcohol limit by vehicle type..",
+        "from_existing": "https://purl.org/csv-cubed/resources/measures#scale"
+      },
+      "data_type": "integer",
+      "unit": {
+        "label": "Number",
+        "from_existing": "http://qudt.org/vocab/unit/NUM"
+      }
+    },
+    "Age 40 and over": {
+      "type": "observations",
+      "measure": {
+        "label": "over_39",
+        "description": "Percentage of over 40 year olds over the legal blood alcohol limit by vehicle type..",
+        "from_existing": "https://purl.org/csv-cubed/resources/measures#scale"
+      },
+      "data_type": "integer",
+      "unit": {
+        "label": "Number",
+        "from_existing": "http://qudt.org/vocab/unit/NUM"
+      }
+    },
+    "Total": {
+      "type": "observations",
+      "measure": {
+        "label": "Licensed",
+        "description": "Total nmber of drivers over the legal blood alcohol limit by vehicle type.",
+        "from_existing": "https://purl.org/csv-cubed/resources/measures#scale"
+      },
+      "data_type": "integer",
+      "unit": {
+        "label": "Number",
+        "from_existing": "http://qudt.org/vocab/unit/NUM"
+      }
+    }
+  }
+}

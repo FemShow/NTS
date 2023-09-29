@@ -1,0 +1,926 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#dataset",
+    "tables": [
+        {
+            "url": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv",
+            "tableSchema": {
+                "columns": [
+                    {
+                        "titles": "Collision year",
+                        "name": "collision_year",
+                        "propertyUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+collision_year}",
+                        "required": true
+                    },
+                    {
+                        "titles": "Vehicle type",
+                        "name": "vehicle_type",
+                        "suppressOutput": true
+                    },
+                    {
+                        "titles": "Age 16 to 19",
+                        "name": "age_16_to_19",
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@16-19",
+                        "propertyUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/16-19",
+                        "datatype": "integer",
+                        "required": true
+                    },
+                    {
+                        "titles": "Age 20 to 29",
+                        "name": "age_20_to_29",
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@20-29",
+                        "propertyUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/20-29",
+                        "datatype": "integer",
+                        "required": true
+                    },
+                    {
+                        "titles": "Age 30 to 39",
+                        "name": "age_30_to_39",
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@30-39",
+                        "propertyUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/30-39",
+                        "datatype": "integer",
+                        "required": true
+                    },
+                    {
+                        "titles": "Age 40 and over",
+                        "name": "age_40_and_over",
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@over_39",
+                        "propertyUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/over_39",
+                        "datatype": "integer",
+                        "required": true
+                    },
+                    {
+                        "titles": "Total",
+                        "name": "total",
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@licensed",
+                        "propertyUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/licensed",
+                        "datatype": "integer",
+                        "required": true
+                    },
+                    {
+                        "name": "virt_slice",
+                        "virtual": true,
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Slice"
+                    },
+                    {
+                        "name": "virt_slice_structure",
+                        "virtual": true,
+                        "propertyUrl": "qb:sliceStructure",
+                        "valueUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#slice/cross-measures"
+                    },
+                    {
+                        "name": "virt_obs_age_16_to_19",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@16-19"
+                    },
+                    {
+                        "name": "virt_obs_age_16_to_19_meas",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@16-19",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/16-19"
+                    },
+                    {
+                        "name": "virt_obs_age_16_to_19_unit",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@16-19",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#unit/number"
+                    },
+                    {
+                        "name": "virt_dim_age_16_to_19_collision_year",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@16-19",
+                        "propertyUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+collision_year}"
+                    },
+                    {
+                        "name": "virt_obs_age_16_to_19_type",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@16-19",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_age_16_to_19",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@16-19",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_age_20_to_29",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@20-29"
+                    },
+                    {
+                        "name": "virt_obs_age_20_to_29_meas",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@20-29",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/20-29"
+                    },
+                    {
+                        "name": "virt_obs_age_20_to_29_unit",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@20-29",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#unit/number"
+                    },
+                    {
+                        "name": "virt_dim_age_20_to_29_collision_year",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@20-29",
+                        "propertyUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+collision_year}"
+                    },
+                    {
+                        "name": "virt_obs_age_20_to_29_type",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@20-29",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_age_20_to_29",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@20-29",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_age_30_to_39",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@30-39"
+                    },
+                    {
+                        "name": "virt_obs_age_30_to_39_meas",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@30-39",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/30-39"
+                    },
+                    {
+                        "name": "virt_obs_age_30_to_39_unit",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@30-39",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#unit/number"
+                    },
+                    {
+                        "name": "virt_dim_age_30_to_39_collision_year",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@30-39",
+                        "propertyUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+collision_year}"
+                    },
+                    {
+                        "name": "virt_obs_age_30_to_39_type",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@30-39",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_age_30_to_39",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@30-39",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_age_40_and_over",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@over_39"
+                    },
+                    {
+                        "name": "virt_obs_age_40_and_over_meas",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@over_39",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/over_39"
+                    },
+                    {
+                        "name": "virt_obs_age_40_and_over_unit",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@over_39",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#unit/number"
+                    },
+                    {
+                        "name": "virt_dim_age_40_and_over_collision_year",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@over_39",
+                        "propertyUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+collision_year}"
+                    },
+                    {
+                        "name": "virt_obs_age_40_and_over_type",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@over_39",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_age_40_and_over",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@over_39",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#dataset"
+                    },
+                    {
+                        "name": "virt_obs_total",
+                        "virtual": true,
+                        "propertyUrl": "qb:observation",
+                        "valueUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@licensed"
+                    },
+                    {
+                        "name": "virt_obs_total_meas",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@licensed",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/licensed"
+                    },
+                    {
+                        "name": "virt_obs_total_unit",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@licensed",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#unit/number"
+                    },
+                    {
+                        "name": "virt_dim_total_collision_year",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@licensed",
+                        "propertyUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#dimension/government-year",
+                        "valueUrl": "government-year.csv#{+collision_year}"
+                    },
+                    {
+                        "name": "virt_obs_total_type",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@licensed",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_total",
+                        "virtual": true,
+                        "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#obs/{collision_year}@licensed",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#dataset"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "collision_year",
+                        "reference": {
+                            "resource": "government-year.csv",
+                            "columnReference": "uri_identifier"
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "collision_year"
+                ],
+                "aboutUrl": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#slice/{collision_year}"
+            }
+        },
+        {
+            "url": "government-year.csv",
+            "tableSchema": "government-year.table.json",
+            "suppressOutput": true
+        }
+    ],
+    "rdfs:seeAlso": [
+        {
+            "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/30-39",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#MeasureProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Percentage of 30 to 39 year olds over the legal blood alcohol limit by vehicle type.."
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "30-39"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#scale"
+                }
+            ]
+        },
+        {
+            "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#component/government-year",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#dimension/government-year"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#dimension/government-year"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 1
+                }
+            ]
+        },
+        {
+            "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/16-19",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#MeasureProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Percentage of 16 to 19 year olds over the legal blood alcohol limit by vehicle type."
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "16-19"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#scale"
+                }
+            ]
+        },
+        {
+            "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/over_39",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#MeasureProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Percentage of over 40 year olds over the legal blood alcohol limit by vehicle type.."
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "over_39"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#scale"
+                }
+            ]
+        },
+        {
+            "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#component/unit",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#attribute": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentRequired": [
+                {
+                    "@value": true
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 3
+                }
+            ]
+        },
+        {
+            "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#component/30-39",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/30-39"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/30-39"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 8
+                }
+            ]
+        },
+        {
+            "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/licensed",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#MeasureProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Total nmber of drivers over the legal blood alcohol limit by vehicle type."
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Licensed"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#scale"
+                }
+            ]
+        },
+        {
+            "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#class/government-year",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/20-29",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#MeasureProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Percentage of 20 to 29 year olds over the legal blood alcohol limit by vehicle type."
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "20-29"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#integer"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#scale"
+                }
+            ]
+        },
+        {
+            "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#component/over_39",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/over_39"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/over_39"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 10
+                }
+            ]
+        },
+        {
+            "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#component/20-29",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/20-29"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/20-29"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 6
+                }
+            ]
+        },
+        {
+            "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#structure",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#DataStructureDefinition"
+            ],
+            "http://purl.org/linked-data/cube#component": [
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#component/measure-type"
+                },
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#component/16-19"
+                },
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#component/government-year"
+                },
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#component/unit"
+                },
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#component/20-29"
+                },
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#component/over_39"
+                },
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#component/licensed"
+                },
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#component/30-39"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/30-39"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                },
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/licensed"
+                },
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/16-19"
+                },
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/20-29"
+                },
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/over_39"
+                },
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#dimension/government-year"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#sliceKey": [
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#slice/cross-measures"
+                }
+            ]
+        },
+        {
+            "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#dimension/government-year",
+            "@type": [
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "government-year.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Government Year"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#class/government-year"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"
+                }
+            ]
+        },
+        {
+            "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#component/16-19",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/16-19"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/16-19"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 4
+                }
+            ]
+        },
+        {
+            "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#slice/cross-measures",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#SliceKey"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#dimension/government-year"
+                }
+            ]
+        },
+        {
+            "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#dataset",
+            "@type": [
+                "http://purl.org/linked-data/cube#DataSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/ns/dcat#Resource",
+                "http://purl.org/linked-data/cube#Attachable",
+                "http://www.w3.org/ns/dcat#Dataset"
+            ],
+            "http://purl.org/dc/terms/creator": [
+                {
+                    "@id": "https://www.gov.uk/government/organisations/department-for-transport"
+                }
+            ],
+            "http://purl.org/dc/terms/description": [
+                {
+                    "@type": "https://www.w3.org/ns/iana/media-types/text/markdown#Resource",
+                    "@value": "Driver and rider fatalities in reported collisions: percentage over the legal blood alcohol limit by vehicle type and driver age"
+                }
+            ],
+            "http://purl.org/dc/terms/identifier": [
+                {
+                    "@value": "Driver and rider fatalities in reported collisions: percentage over the legal blood alcohol limit by vehicle type and driver age"
+                }
+            ],
+            "http://purl.org/dc/terms/issued": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-09-29T11:11:11.440697"
+                }
+            ],
+            "http://purl.org/dc/terms/license": [
+                {
+                    "@id": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                }
+            ],
+            "http://purl.org/dc/terms/modified": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-09-29T11:11:11.440697"
+                }
+            ],
+            "http://purl.org/dc/terms/publisher": [
+                {
+                    "@id": "https://www.gov.uk/government/organisations/department-for-transport"
+                }
+            ],
+            "http://purl.org/dc/terms/title": [
+                {
+                    "@language": "en",
+                    "@value": "Driver and rider fatalities in reported collisions: percentage over the legal blood alcohol limit by vehicle type and driver age"
+                }
+            ],
+            "http://purl.org/linked-data/cube#structure": [
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#structure"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Driver and rider fatalities in reported collisions: percentage over the legal blood alcohol limit by vehicle type and driver age"
+                }
+            ],
+            "http://www.w3.org/ns/dcat#keyword": [
+                {
+                    "@language": "en",
+                    "@value": "DUI"
+                },
+                {
+                    "@language": "en",
+                    "@value": "alcohol"
+                },
+                {
+                    "@language": "en",
+                    "@value": "fatalaties"
+                },
+                {
+                    "@language": "en",
+                    "@value": "collisions"
+                }
+            ],
+            "http://www.w3.org/ns/prov#wasGeneratedBy": [
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#csvcubed-build-activity"
+                }
+            ]
+        },
+        {
+            "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#csvcubed-build-activity",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/ns/prov#Activity"
+            ],
+            "http://www.w3.org/ns/prov#used": [
+                {
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.4.4"
+                }
+            ]
+        },
+        {
+            "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#component/licensed",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/licensed"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#measure/licensed"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 12
+                }
+            ]
+        },
+        {
+            "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#component/measure-type",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 9
+                },
+                {
+                    "@value": 2
+                },
+                {
+                    "@value": 11
+                },
+                {
+                    "@value": 5
+                },
+                {
+                    "@value": 7
+                }
+            ]
+        },
+        {
+            "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#dependency/government-year",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://rdfs.org/ns/void#Dataset"
+            ],
+            "http://rdfs.org/ns/void#dataDump": [
+                {
+                    "@id": "./government-year.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "government-year.csv#"
+                }
+            ]
+        },
+        {
+            "@id": "driver-and-rider-fatalities-in-reported-collisions-percentage-over-the-legal-blood-alcohol-limit-by-vehicle-type-and-driver-age.csv#unit/number",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit",
+                "http://qudt.org/schema/qudt/Unit"
+            ],
+            "http://qudt.org/schema/qudt/isScalingOf": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/NUM"
+                }
+            ],
+            "http://www.ontology-of-units-of-measure.org/resource/om-2/hasFactor": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#float",
+                    "@value": "1.0"
+                }
+            ],
+            "http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/NUM"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/NUM"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Number"
+                }
+            ]
+        }
+    ]
+}
